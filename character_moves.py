@@ -66,3 +66,14 @@ while True:
         grass.draw_now(400, 30)
         character.draw_now(x, y)
         delay(0.01)
+    cx, cy, r = 400, 300, 210
+    for degree in range(0, 360, 2):
+        clear_canvas_now()
+        grass.draw_now(400, 30)
+        rad = math.radians(degree)
+        ox = int(cx + r * math.cos(-1 * rad))
+        oy = int(cy + r * math.sin(-1 * rad))
+        character.draw_now(ox, oy)
+        delay(0.01)
+
+close_canvas()
